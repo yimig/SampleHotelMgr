@@ -30,12 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.roomGridView = new System.Windows.Forms.DataGridView();
-            this.hotelDataSet = new HotelMgr2017101999.hotelDataSet();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.roomTableAdapter = new HotelMgr2017101999.hotelDataSetTableAdapters.RoomTableAdapter();
             this.roomIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomFloorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +38,13 @@
             this.personNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inPersonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSet = new HotelMgr2017101999.hotelDataSet();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.clientGridView = new System.Windows.Forms.DataGridView();
             this.registerRoomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.roomTableAdapter = new HotelMgr2017101999.hotelDataSetTableAdapters.RoomTableAdapter();
             this.registerRoomTableAdapter = new HotelMgr2017101999.hotelDataSetTableAdapters.RegisterRoomTableAdapter();
             this.inIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomIdDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             this.inTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.outTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.certTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.certIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,10 +62,10 @@
             this.operDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delMarkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerRoomBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -79,26 +79,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "入住情况";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.clientGridView);
-            this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Location = new System.Drawing.Point(12, 364);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(594, 195);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "旅客信息";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Location = new System.Drawing.Point(16, 314);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(485, 184);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
             // 
             // roomGridView
             // 
@@ -124,20 +104,6 @@
             this.roomGridView.Size = new System.Drawing.Size(560, 307);
             this.roomGridView.TabIndex = 0;
             this.roomGridView.SelectionChanged += new System.EventHandler(this.roomGridView_SelectionChanged);
-            // 
-            // hotelDataSet
-            // 
-            this.hotelDataSet.DataSetName = "hotelDataSet";
-            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomBindingSource
-            // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.hotelDataSet;
-            // 
-            // roomTableAdapter
-            // 
-            this.roomTableAdapter.ClearBeforeFill = true;
             // 
             // roomIdDataGridViewTextBoxColumn
             // 
@@ -188,6 +154,27 @@
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             this.noteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // roomBindingSource
+            // 
+            this.roomBindingSource.DataMember = "Room";
+            this.roomBindingSource.DataSource = this.hotelDataSet;
+            // 
+            // hotelDataSet
+            // 
+            this.hotelDataSet.DataSetName = "hotelDataSet";
+            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.clientGridView);
+            this.groupBox3.Controls.Add(this.groupBox4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 364);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(594, 195);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "旅客信息";
+            // 
             // clientGridView
             // 
             this.clientGridView.AllowUserToAddRows = false;
@@ -202,7 +189,7 @@
             this.inTimeDataGridViewTextBoxColumn,
             this.outTimeDataGridViewTextBoxColumn,
             this.clientNameDataGridViewTextBoxColumn,
-            this.sexDataGridViewCheckBoxColumn,
+            this.sex,
             this.phoneDataGridViewTextBoxColumn,
             this.certTypeDataGridViewTextBoxColumn,
             this.certIdDataGridViewTextBoxColumn,
@@ -225,6 +212,19 @@
             // 
             this.registerRoomBindingSource.DataMember = "RegisterRoom";
             this.registerRoomBindingSource.DataSource = this.hotelDataSet;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(16, 314);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(485, 184);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
+            // roomTableAdapter
+            // 
+            this.roomTableAdapter.ClearBeforeFill = true;
             // 
             // registerRoomTableAdapter
             // 
@@ -279,12 +279,12 @@
             this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
             this.clientNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // sexDataGridViewCheckBoxColumn
+            // sex
             // 
-            this.sexDataGridViewCheckBoxColumn.DataPropertyName = "sex";
-            this.sexDataGridViewCheckBoxColumn.HeaderText = "性别";
-            this.sexDataGridViewCheckBoxColumn.Name = "sexDataGridViewCheckBoxColumn";
-            this.sexDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.sex.DataPropertyName = "sex";
+            this.sex.HeaderText = "性别";
+            this.sex.Name = "sex";
+            this.sex.ReadOnly = true;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
@@ -346,10 +346,10 @@
             this.Text = "客房信息";
             this.Load += new System.EventHandler(this.RoomForm_Load);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roomGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clientGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerRoomBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -382,7 +382,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn inTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn outTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn sexDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn certTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn certIdDataGridViewTextBoxColumn;

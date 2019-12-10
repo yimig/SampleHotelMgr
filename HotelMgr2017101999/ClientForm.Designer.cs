@@ -33,24 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnQuery = new System.Windows.Forms.Button();
             this.clientGridView = new System.Windows.Forms.DataGridView();
-            this.hotelDataSet = new HotelMgr2017101999.hotelDataSet();
             this.registerRoomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSet = new HotelMgr2017101999.hotelDataSet();
             this.registerRoomTableAdapter = new HotelMgr2017101999.hotelDataSetTableAdapters.RegisterRoomTableAdapter();
-            this.inIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foregiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.outTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.certTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.certIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delMarkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtClientName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rbFemale = new System.Windows.Forms.RadioButton();
@@ -67,9 +52,24 @@
             this.txtPersonNum = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
+            this.inIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.foregiftDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.outTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexZh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.certTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.certIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delMarkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerRoomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtQueryName
@@ -112,7 +112,7 @@
             this.inTimeDataGridViewTextBoxColumn,
             this.outTimeDataGridViewTextBoxColumn,
             this.clientNameDataGridViewTextBoxColumn,
-            this.sexDataGridViewCheckBoxColumn,
+            this.sexZh,
             this.phoneDataGridViewTextBoxColumn,
             this.certTypeDataGridViewTextBoxColumn,
             this.certIdDataGridViewTextBoxColumn,
@@ -132,110 +132,19 @@
             this.clientGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.clientGridView_CellFormatting);
             this.clientGridView.SelectionChanged += new System.EventHandler(this.clientGridView_SelectionChanged);
             // 
-            // hotelDataSet
-            // 
-            this.hotelDataSet.DataSetName = "hotelDataSet";
-            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // registerRoomBindingSource
             // 
             this.registerRoomBindingSource.DataMember = "RegisterRoom";
             this.registerRoomBindingSource.DataSource = this.hotelDataSet;
             // 
+            // hotelDataSet
+            // 
+            this.hotelDataSet.DataSetName = "hotelDataSet";
+            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // registerRoomTableAdapter
             // 
             this.registerRoomTableAdapter.ClearBeforeFill = true;
-            // 
-            // inIdDataGridViewTextBoxColumn
-            // 
-            this.inIdDataGridViewTextBoxColumn.DataPropertyName = "inId";
-            this.inIdDataGridViewTextBoxColumn.HeaderText = "inId";
-            this.inIdDataGridViewTextBoxColumn.Name = "inIdDataGridViewTextBoxColumn";
-            this.inIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // roomIdDataGridViewTextBoxColumn
-            // 
-            this.roomIdDataGridViewTextBoxColumn.DataPropertyName = "roomId";
-            this.roomIdDataGridViewTextBoxColumn.HeaderText = "房间号";
-            this.roomIdDataGridViewTextBoxColumn.Name = "roomIdDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "价格";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // foregiftDataGridViewTextBoxColumn
-            // 
-            this.foregiftDataGridViewTextBoxColumn.DataPropertyName = "foregift";
-            this.foregiftDataGridViewTextBoxColumn.HeaderText = "押金";
-            this.foregiftDataGridViewTextBoxColumn.Name = "foregiftDataGridViewTextBoxColumn";
-            // 
-            // inTimeDataGridViewTextBoxColumn
-            // 
-            this.inTimeDataGridViewTextBoxColumn.DataPropertyName = "inTime";
-            this.inTimeDataGridViewTextBoxColumn.HeaderText = "入住时间";
-            this.inTimeDataGridViewTextBoxColumn.Name = "inTimeDataGridViewTextBoxColumn";
-            // 
-            // outTimeDataGridViewTextBoxColumn
-            // 
-            this.outTimeDataGridViewTextBoxColumn.DataPropertyName = "outTime";
-            this.outTimeDataGridViewTextBoxColumn.HeaderText = "离开时间";
-            this.outTimeDataGridViewTextBoxColumn.Name = "outTimeDataGridViewTextBoxColumn";
-            // 
-            // clientNameDataGridViewTextBoxColumn
-            // 
-            this.clientNameDataGridViewTextBoxColumn.DataPropertyName = "clientName";
-            this.clientNameDataGridViewTextBoxColumn.HeaderText = "客户姓名";
-            this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
-            // 
-            // sexDataGridViewCheckBoxColumn
-            // 
-            this.sexDataGridViewCheckBoxColumn.DataPropertyName = "sex";
-            this.sexDataGridViewCheckBoxColumn.HeaderText = "性别";
-            this.sexDataGridViewCheckBoxColumn.Name = "sexDataGridViewCheckBoxColumn";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "电话";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            // 
-            // certTypeDataGridViewTextBoxColumn
-            // 
-            this.certTypeDataGridViewTextBoxColumn.DataPropertyName = "certType";
-            this.certTypeDataGridViewTextBoxColumn.HeaderText = "身份类型";
-            this.certTypeDataGridViewTextBoxColumn.Name = "certTypeDataGridViewTextBoxColumn";
-            // 
-            // certIdDataGridViewTextBoxColumn
-            // 
-            this.certIdDataGridViewTextBoxColumn.DataPropertyName = "certId";
-            this.certIdDataGridViewTextBoxColumn.HeaderText = "身份号";
-            this.certIdDataGridViewTextBoxColumn.Name = "certIdDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "地址";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // personNumDataGridViewTextBoxColumn
-            // 
-            this.personNumDataGridViewTextBoxColumn.DataPropertyName = "personNum";
-            this.personNumDataGridViewTextBoxColumn.HeaderText = "入住人数";
-            this.personNumDataGridViewTextBoxColumn.Name = "personNumDataGridViewTextBoxColumn";
-            // 
-            // operDataGridViewTextBoxColumn
-            // 
-            this.operDataGridViewTextBoxColumn.DataPropertyName = "Oper";
-            this.operDataGridViewTextBoxColumn.HeaderText = "操作员";
-            this.operDataGridViewTextBoxColumn.Name = "operDataGridViewTextBoxColumn";
-            // 
-            // delMarkDataGridViewCheckBoxColumn
-            // 
-            this.delMarkDataGridViewCheckBoxColumn.DataPropertyName = "delMark";
-            this.delMarkDataGridViewCheckBoxColumn.HeaderText = "delMark";
-            this.delMarkDataGridViewCheckBoxColumn.Name = "delMarkDataGridViewCheckBoxColumn";
             // 
             // txtClientName
             // 
@@ -382,6 +291,111 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // inIdDataGridViewTextBoxColumn
+            // 
+            this.inIdDataGridViewTextBoxColumn.DataPropertyName = "inId";
+            this.inIdDataGridViewTextBoxColumn.HeaderText = "inId";
+            this.inIdDataGridViewTextBoxColumn.Name = "inIdDataGridViewTextBoxColumn";
+            this.inIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // roomIdDataGridViewTextBoxColumn
+            // 
+            this.roomIdDataGridViewTextBoxColumn.DataPropertyName = "roomId";
+            this.roomIdDataGridViewTextBoxColumn.HeaderText = "房间号";
+            this.roomIdDataGridViewTextBoxColumn.Name = "roomIdDataGridViewTextBoxColumn";
+            this.roomIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "价格";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // foregiftDataGridViewTextBoxColumn
+            // 
+            this.foregiftDataGridViewTextBoxColumn.DataPropertyName = "foregift";
+            this.foregiftDataGridViewTextBoxColumn.HeaderText = "押金";
+            this.foregiftDataGridViewTextBoxColumn.Name = "foregiftDataGridViewTextBoxColumn";
+            this.foregiftDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inTimeDataGridViewTextBoxColumn
+            // 
+            this.inTimeDataGridViewTextBoxColumn.DataPropertyName = "inTime";
+            this.inTimeDataGridViewTextBoxColumn.HeaderText = "入住时间";
+            this.inTimeDataGridViewTextBoxColumn.Name = "inTimeDataGridViewTextBoxColumn";
+            this.inTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // outTimeDataGridViewTextBoxColumn
+            // 
+            this.outTimeDataGridViewTextBoxColumn.DataPropertyName = "outTime";
+            this.outTimeDataGridViewTextBoxColumn.HeaderText = "离开时间";
+            this.outTimeDataGridViewTextBoxColumn.Name = "outTimeDataGridViewTextBoxColumn";
+            this.outTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clientNameDataGridViewTextBoxColumn
+            // 
+            this.clientNameDataGridViewTextBoxColumn.DataPropertyName = "clientName";
+            this.clientNameDataGridViewTextBoxColumn.HeaderText = "客户姓名";
+            this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
+            this.clientNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sexZh
+            // 
+            this.sexZh.DataPropertyName = "sex";
+            this.sexZh.HeaderText = "性别";
+            this.sexZh.Name = "sexZh";
+            this.sexZh.ReadOnly = true;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "电话";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // certTypeDataGridViewTextBoxColumn
+            // 
+            this.certTypeDataGridViewTextBoxColumn.DataPropertyName = "certType";
+            this.certTypeDataGridViewTextBoxColumn.HeaderText = "身份类型";
+            this.certTypeDataGridViewTextBoxColumn.Name = "certTypeDataGridViewTextBoxColumn";
+            this.certTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // certIdDataGridViewTextBoxColumn
+            // 
+            this.certIdDataGridViewTextBoxColumn.DataPropertyName = "certId";
+            this.certIdDataGridViewTextBoxColumn.HeaderText = "身份号";
+            this.certIdDataGridViewTextBoxColumn.Name = "certIdDataGridViewTextBoxColumn";
+            this.certIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "地址";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // personNumDataGridViewTextBoxColumn
+            // 
+            this.personNumDataGridViewTextBoxColumn.DataPropertyName = "personNum";
+            this.personNumDataGridViewTextBoxColumn.HeaderText = "入住人数";
+            this.personNumDataGridViewTextBoxColumn.Name = "personNumDataGridViewTextBoxColumn";
+            this.personNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // operDataGridViewTextBoxColumn
+            // 
+            this.operDataGridViewTextBoxColumn.DataPropertyName = "Oper";
+            this.operDataGridViewTextBoxColumn.HeaderText = "操作员";
+            this.operDataGridViewTextBoxColumn.Name = "operDataGridViewTextBoxColumn";
+            this.operDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // delMarkDataGridViewCheckBoxColumn
+            // 
+            this.delMarkDataGridViewCheckBoxColumn.DataPropertyName = "delMark";
+            this.delMarkDataGridViewCheckBoxColumn.HeaderText = "delMark";
+            this.delMarkDataGridViewCheckBoxColumn.Name = "delMarkDataGridViewCheckBoxColumn";
+            this.delMarkDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -411,8 +425,8 @@
             this.Text = "旅客信息";
             this.Load += new System.EventHandler(this.ClientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerRoomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,21 +441,6 @@
         private hotelDataSet hotelDataSet;
         private System.Windows.Forms.BindingSource registerRoomBindingSource;
         private hotelDataSetTableAdapters.RegisterRoomTableAdapter registerRoomTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foregiftDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn outTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn sexDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn certTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn certIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn personNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn delMarkDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TextBox txtClientName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton rbFemale;
@@ -458,5 +457,20 @@
         private System.Windows.Forms.TextBox txtPersonNum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foregiftDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn outTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexZh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn operDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn delMarkDataGridViewCheckBoxColumn;
     }
 }

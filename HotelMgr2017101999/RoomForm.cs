@@ -41,10 +41,10 @@ namespace HotelMgr2017101999
 
         private void clientGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            //            if (e.ColumnIndex == 7)
-            //            {
-            //                e.Value = e.Value.ToString() == "True" ? "男" : "女";
-            //            }
+            if (e.ColumnIndex == 7)
+            {
+                e.Value = e.Value.ToString() == "True" ? "男" : "女";
+            }
         }
     }
 }

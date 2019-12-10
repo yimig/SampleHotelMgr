@@ -78,14 +78,14 @@
             // miCheckIn
             // 
             this.miCheckIn.Name = "miCheckIn";
-            this.miCheckIn.Size = new System.Drawing.Size(126, 22);
+            this.miCheckIn.Size = new System.Drawing.Size(180, 22);
             this.miCheckIn.Text = "入住登记";
             this.miCheckIn.Click += new System.EventHandler(this.miCheckIn_Click);
             // 
             // miCheckOut
             // 
             this.miCheckOut.Name = "miCheckOut";
-            this.miCheckOut.Size = new System.Drawing.Size(126, 22);
+            this.miCheckOut.Size = new System.Drawing.Size(180, 22);
             this.miCheckOut.Text = "退房登记";
             this.miCheckOut.Click += new System.EventHandler(this.miCheckOut_Click);
             // 
@@ -120,7 +120,6 @@
             this.miUserManage.Name = "miUserManage";
             this.miUserManage.Size = new System.Drawing.Size(87, 20);
             this.miUserManage.Text = "用户管理(&U)";
-            this.miUserManage.Click += new System.EventHandler(this.miNewUser_Click);
             // 
             // miAddUser
             // 
@@ -147,7 +146,7 @@
             // miAbout
             // 
             this.miAbout.Name = "miAbout";
-            this.miAbout.Size = new System.Drawing.Size(100, 22);
+            this.miAbout.Size = new System.Drawing.Size(180, 22);
             this.miAbout.Text = "关于";
             this.miAbout.Click += new System.EventHandler(this.miAbout_Click);
             // 
@@ -232,7 +231,7 @@
             this.toolStripButton6.Text = "删除/修改用户";
             this.toolStripButton6.Click += new System.EventHandler(this.miEditUser_Click);
             // 
-            // MainForm1999
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,7 +242,7 @@
             this.Controls.Add(this.menuStrip2);
             this.IsMdiContainer = true;
             this.MinimizeBox = false;
-            this.Name = "MainForm1999";
+            this.Name = "MainForm";
             this.Text = "酒店管理系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm1999_FormClosed);

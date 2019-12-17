@@ -32,24 +32,24 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userPwdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSet = new HotelMgr2017101999.hotelDataSet();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtRole = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnChange = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
-            this.hotelDataSet = new HotelMgr2017101999.hotelDataSet();
-            this.hotelDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userDetailsTableAdapter = new HotelMgr2017101999.hotelDataSetTableAdapters.UserDetailsTableAdapter();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userPwdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -58,6 +58,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(95, 21);
             this.txtUserName.TabIndex = 32;
+            this.txtUserName.Click += new System.EventHandler(this.TB_Click);
             // 
             // label13
             // 
@@ -89,12 +90,58 @@
             this.dgvUsers.TabIndex = 33;
             this.dgvUsers.Click += new System.EventHandler(this.dgvUsers_Click);
             // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "userName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "用户名";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // userPwdDataGridViewTextBoxColumn
+            // 
+            this.userPwdDataGridViewTextBoxColumn.DataPropertyName = "userPwd";
+            this.userPwdDataGridViewTextBoxColumn.HeaderText = "密码（已加密）";
+            this.userPwdDataGridViewTextBoxColumn.Name = "userPwdDataGridViewTextBoxColumn";
+            this.userPwdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userPwdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "权限";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "注释";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userDetailsBindingSource
+            // 
+            this.userDetailsBindingSource.DataMember = "UserDetails";
+            this.userDetailsBindingSource.DataSource = this.hotelDataSetBindingSource;
+            // 
+            // hotelDataSetBindingSource
+            // 
+            this.hotelDataSetBindingSource.DataSource = this.hotelDataSet;
+            this.hotelDataSetBindingSource.Position = 0;
+            // 
+            // hotelDataSet
+            // 
+            this.hotelDataSet.DataSetName = "hotelDataSet";
+            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtPwd
             // 
             this.txtPwd.Location = new System.Drawing.Point(253, 295);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(95, 21);
             this.txtPwd.TabIndex = 35;
+            this.txtPwd.Click += new System.EventHandler(this.TB_Click);
             // 
             // label1
             // 
@@ -111,6 +158,7 @@
             this.txtRole.Name = "txtRole";
             this.txtRole.Size = new System.Drawing.Size(95, 21);
             this.txtRole.TabIndex = 37;
+            this.txtRole.Click += new System.EventHandler(this.TB_Click);
             // 
             // label2
             // 
@@ -141,50 +189,9 @@
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // hotelDataSet
-            // 
-            this.hotelDataSet.DataSetName = "hotelDataSet";
-            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hotelDataSetBindingSource
-            // 
-            this.hotelDataSetBindingSource.DataSource = this.hotelDataSet;
-            this.hotelDataSetBindingSource.Position = 0;
-            // 
-            // userDetailsBindingSource
-            // 
-            this.userDetailsBindingSource.DataMember = "UserDetails";
-            this.userDetailsBindingSource.DataSource = this.hotelDataSetBindingSource;
-            // 
             // userDetailsTableAdapter
             // 
             this.userDetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "userName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "用户名";
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // userPwdDataGridViewTextBoxColumn
-            // 
-            this.userPwdDataGridViewTextBoxColumn.DataPropertyName = "userPwd";
-            this.userPwdDataGridViewTextBoxColumn.HeaderText = "密码（已加密）";
-            this.userPwdDataGridViewTextBoxColumn.Name = "userPwdDataGridViewTextBoxColumn";
-            this.userPwdDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "权限";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "注释";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
             // UserManagerForm
             // 
@@ -204,9 +211,9 @@
             this.Text = "修改/删除用户";
             this.Load += new System.EventHandler(this.UserManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

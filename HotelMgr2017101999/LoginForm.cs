@@ -62,7 +62,7 @@ namespace HotelMgr2017101999
         /// </summary>
         /// <param name="userName">输入用户名</param>
         /// <returns></returns>
-        bool CheckUserName(string userName)
+        private bool CheckUserName(string userName)
         {
             bool result=true;
             if (string.IsNullOrEmpty(userName))
@@ -79,7 +79,7 @@ namespace HotelMgr2017101999
         /// </summary>
         /// <param name="pwd">输入密码</param>
         /// <returns></returns>
-        bool CheckPwd(string pwd)
+        private bool CheckPwd(string pwd)
         {
             bool result = true;
             if (string.IsNullOrEmpty(pwd))
@@ -95,7 +95,7 @@ namespace HotelMgr2017101999
         /// 接入登录程序
         /// </summary>
         /// <param name="info">用户信息</param>
-        void StartLogin()
+        private void StartLogin()
         {
             List<User> users=UserManager.GetUsers(txtName.Text, Encryption.SHA1(txtPwd.Text));
             if (users.Count!=0)

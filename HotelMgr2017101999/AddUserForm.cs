@@ -47,7 +47,7 @@ namespace HotelMgr2017101999
         /// </summary>
         /// <param name="info">提示内容</param>
         /// <param name="focusTextBox">需要给焦点的TextBox</param>
-        void AlertMessageBox(string info, TextBox focusTextBox)
+        private void AlertMessageBox(string info, TextBox focusTextBox)
         {
             MessageBox.Show(info, "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             focusTextBox.Focus();
@@ -58,7 +58,7 @@ namespace HotelMgr2017101999
         /// </summary>
         /// <param name="userName">输入用户名</param>
         /// <returns></returns>
-        bool CheckUserName()
+        private bool CheckUserName()
         {
             bool result = true;
             if (string.IsNullOrEmpty(txtName.Text))
@@ -75,7 +75,7 @@ namespace HotelMgr2017101999
         /// </summary>
         /// <param name="pwd">输入密码</param>
         /// <returns></returns>
-        bool CheckPwd()
+        private bool CheckPwd()
         {
 
             bool result = true;
@@ -92,7 +92,7 @@ namespace HotelMgr2017101999
         /// 返回选中的用户类型
         /// </summary>
         /// <returns></returns>
-        UserType CheckUserType()
+        private UserType CheckUserType()
         {
             return rbEmp.Checked ? UserType.User : UserType.Admin;
         }
@@ -105,7 +105,7 @@ namespace HotelMgr2017101999
         /// <param name="userPsw">用户密码</param>
         /// <param name="userType">用户类型</param>
         /// <returns></returns>
-        void StartRegister(string userName, string userPsw, UserType userType)
+        private void StartRegister(string userName, string userPsw, UserType userType)
         {
             if (!UpdateUserInfo(new User(userName, userPsw, (int) userType))) MessageBox.Show("注册失败！");
             else MessageBox.Show("注册成功！");
@@ -115,7 +115,7 @@ namespace HotelMgr2017101999
         /// 上传用户信息
         /// </summary>
         /// <param name="userInfo">获得的用户信息</param>
-        bool UpdateUserInfo(User userInfo)
+        private bool UpdateUserInfo(User userInfo)
         {
             return UserManager.AddUser(userInfo);
         }
@@ -126,7 +126,7 @@ namespace HotelMgr2017101999
         /// <summary>
         /// 用户类型
         /// </summary>
-        enum UserType { User,Admin}
+        private enum UserType { User,Admin}
 
 
         #endregion

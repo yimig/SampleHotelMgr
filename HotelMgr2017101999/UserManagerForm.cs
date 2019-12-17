@@ -54,5 +54,11 @@ namespace HotelMgr2017101999
             txtPwd.Text = selRow.Cells[1].Value.ToString();
             txtRole.Text = selRow.Cells[2].Value.ToString();
         }
+
+        private void TB_Click(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox) sender;
+            tb.SelectAll();
+        }
     }
 }
